@@ -1,0 +1,32 @@
+.container-title {
+    h2 {
+        font-size: 35px;
+    };
+    .paragrafo {
+        font-size: 10 px;
+        text-align: justify;
+    }
+}
+
+.logo {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.bg-red {
+  background-color: #8e210b!important;
+}
+
+.carousel-caption {
+  bottom: 6.25rem!important;
+  h3 {
+    font-family: "Homemade Apple", cursive;
+    font-size: 40px;
+    text-shadow: black 2px 3px 3px;
+  }
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 4rem!important;
+  height: 4rem!important;
+}
