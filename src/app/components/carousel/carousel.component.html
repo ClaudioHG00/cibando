@@ -1,0 +1,45 @@
+<!-- <ngb-carousel *ngIf="images.length > 1">
+	<ng-template ngbSlide *ngFor="let image of images">
+		<div class="picsum-img-wrapper">
+			<img [src]="percorso + image.id + '.jpg'" [alt]="image.label" />
+		</div>
+		<div class="carousel-caption">
+			<h3>{{image.label}}</h3>
+		</div>
+    </ng-template>
+</ngb-carousel> -->
+
+<!-- <div *ngIf="images.length == 1">
+    <img [src]="percorso + images[0].id + '.jpg'" [alt]="images[0].label" />
+</div> -->
+<div id="carosello" *ngIf="images.length > 1 && recipes === undefined">
+  <ngb-carousel>
+    <ng-template ngbSlide *ngFor="let image of images; let i = index">
+      <div class="picsum-img-wrapper">
+        <div class="image" [ngStyle]="{ 'background-image': 'url(' + percorso + image.id + '.jpg)' }"></div>
+      </div>
+      <div class="carousel-caption">
+        <h2>{{ image.label }}</h2>
+        <h5 *ngIf="i === images.length - 1">Stai visualizzando l'ultima foto</h5>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+
+
+<div id="carosello-sec" *ngIf="recipes !== undefined">
+  <ngb-carousel>
+    <ng-template ngbSlide *ngFor="let recipe of recipes">
+      <div class="carousel-slide">
+        <div class="carousel-caption">
+          <h3>{{ recipe.title }}</h3>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+
+
+<ng-template *ngIf="images.length === 1 && recipes === undefined" #noSlide>
+  <img [src]="percorso + images[0].id + '.jpg'" [alt]="images[0].label" />
+</ng-template>

@@ -1,27 +1,143 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "primeicons/primeicons.css";
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import '/src/styles/colors.scss';
+
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.carousel {
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  width: 4rem!important;
-  height: 4rem!important;
+.active {
+  color: white!important;
+  font-weight: bold!important;
 }
 
-.carousel-caption {
-  bottom: 6.25rem!important;
-  h3 {
-    font-family: "Homemade Apple", cursive;
-    font-size: 40px;
-    text-shadow: black 2px 3px 3px;
+
+
+.form-control {
+  float: right;
+  width: 91% !important;
+
+  .padding {
+    padding: 0!important;
+  }
+
+  .form-label {
+    margin-left: 35px;
+  }
+
+  .p-inputtext {
+    border: none!important;
+    padding: 0.4rem 0.5rem!important;;
+    width: 100%!important;
+
+  }
+
+  .p-component {
+    width: 100%!important;
+    padding: 0!important;
+  }
+
+  .p-password {
+    padding: 0!important;
+  }
+
+}
+
+.contenitore {
+  width: 100%;
+  padding: 20px;
+
+  h2 {
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  p {
+    text-align: justify;
   }
 }
 
+#carosello {
+  .carousel {
+    clear: both;
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      width: 4.5rem!important;
+      height: 4.5rem!important;
+      background-color: $primary-color-1;
+      border-radius: 50%
+    }
+
+    .carousel-slide {
+      display: block;
+      height: 15vh;
+      background-color: black;
+    }
+
+    .carousel-inner {
+
+      .carousel-caption {
+        bottom: 6.25rem!important;
+        h2 {
+          font-family: "Homemade Apple", cursive!important;
+          font-size: 40px;
+          text-shadow: black 2px 3px 3px;
+          color: white;
+        }
+        h5 {
+          text-align: center;
+          text-shadow: black 2px 3px 3px;
+          color: white;
+        }
+      }
+    }
+  }
 }
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+#carosello-sec {
+  .carousel {
+    clear: both;
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      width: 4.5rem!important;
+      height: 4.5rem!important;
+      background-color: $primary-color-1;
+      border-radius: 50%
+    }
+
+    .carousel-inner {
+
+      .carousel-slide {
+        display: block;
+        height: 15vh;
+        background-color: black;
+      }
+
+      .carousel-caption {
+        bottom: 50% !important;
+        text-align: center !important;
+
+        h3 {
+          font-family: "Homemade Apple", cursive!important;
+          font-size: 40px;
+          color: white;
+          margin-bottom: -7vh!important;
+        }
+      }
+    }
+  }
+}
+
+.testoEvidenziato {
+  background-color: yellow;
+  width: 400px;
+}
+
+footer {
+  clear: both;
+}
+

@@ -1,0 +1,47 @@
+<app-carousel></app-carousel>
+<div class="contenitore">
+  <h2 [ngClass]="evidenziato ? 'testoEvidenziato' : ''" (click)="onEvidenziazione()" style="cursor: pointer">
+    Benvenuti in Cibando
+  </h2>
+  <p class="paragrafo" [ngStyle]="{ 'background-color': evidenziato == true ? 'yellow' : 'white' }">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero
+    voluptatum laborum nihil vel illum voluptates consequuntur, aperiam sapiente
+    molestiae facilis possimus corrupti eligendi suscipit est praesentium harum
+    voluptate earum soluta omnis illo aliquam perspiciatis nostrum! Quae
+    officiis laboriosam cum nobis quaerat libero assumenda, iure, quam omnis
+    fugit ipsa optio fuga debitis laudantium alias praesentium, quisquam
+    recusandae nam qui dolorem doloremque facere iusto. Hic ratione nostrum
+    ipsam dicta quia, est rerum facere, voluptates exercitationem quos veniam
+    ducimus labore, recusandae quas dolore aut delectus! Eos non, eum ipsam modi
+    labore incidunt. Aspernatur enim, doloribus nisi deserunt adipisci sequi
+    perspiciatis placeat illo ipsam nam nemo beatae. Maiores adipisci tenetur
+    harum facilis corrupti rerum. Officia possimus provident dolorem, tenetur
+    recusandae ipsa non impedit eum maxime est aperiam accusantium molestias
+    cumque illo soluta vel, illum doloribus, laborum odio officiis laboriosam
+    nisi. Fuga voluptatibus similique repellendus veritatis vitae, tempora
+    delectus aperiam? Laudantium reprehenderit maiores ea iste odio commodi?
+    Quos sit, ipsam accusamus cumque sunt aut repellat possimus dolorum, non
+    labore saepe repellendus cum nihil alias nobis, expedita facilis perferendis
+    illum voluptatibus explicabo magnam numquam eveniet? Libero aliquid deserunt
+    recusandae officiis error laudantium iusto magnam! Cum aperiam ab sint vel
+    culpa voluptas expedita voluptatem aut ad sunt enim harum, architecto rem
+    sequi? Similique beatae odio pariatur natus consequatur veniam velit
+    possimus? Aspernatur vel sed a amet cupiditate. Sapiente hic eos cumque vero
+    maiores iure nobis, fuga eius possimus quae. Reprehenderit voluptate id
+    ipsum! Expedita minima tempore quis voluptate voluptatibus eum perferendis
+    ea inventore excepturi dicta sed optio nesciunt repellat, veniam
+    repudiandae! Suscipit, amet! Voluptatibus porro commodi officiis tempore
+    tempora sunt sequi itaque mollitia adipisci minus quas, alias impedit harum
+    vero debitis distinctio rem voluptates quaerat placeat esse facere
+    blanditiis numquam? Commodi ut, dicta optio sit, excepturi explicabo
+    voluptatum alias dolores quidem sed, consectetur cumque asperiores ullam.
+  </p>
+</div>
+
+
+<h2>Le ultime ricette</h2>
+
+<app-recipe-card [recipes]="ricette"></app-recipe-card>
+
+
+

@@ -1,0 +1,43 @@
+@import "../../../styles/colors.scss";
+
+.container-card {
+  display: block;
+  float: left;
+  width: 23%;
+  margin-left: 1.6%;
+  margin-bottom: 30px;
+  .card {
+    .card-image {
+      height: 200px;
+      // background-image: url('../../../assets/images/imageBg-1.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      //background-size: contain;
+    }
+
+    .card-body{
+      .card-title {
+        font-weight: bold;
+        font-size: 16px;
+        color: $primary-color-1;
+      }
+
+      .card-text {
+        text-align: justify;
+        height: 150px;
+      }
+
+      .btn.btn-primary {
+        font-size: 15px;
+        background-color: $primary-color-1;
+        border: none;
+        margin: auto;
+        display: block;
+        font-weight: 700;
+        padding: 13px;
+      }
+    }
+  }
+}
+

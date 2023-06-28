@@ -1,0 +1,13 @@
+@import "../../../styles/colors.scss";
+
+header {
+
+  .logo {
+    width: 60px;
+    margin-right: 10px;
+  }
+
+  .bg-red {
+    background-color: $primary-color-1!important;
+  }
+}

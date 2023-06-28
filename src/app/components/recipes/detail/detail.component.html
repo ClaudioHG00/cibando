@@ -1,0 +1,18 @@
+<div *ngIf="ricetta">
+  <div class="image" [ngStyle]="{ 'background-image': 'url(' + ricetta.image + ')' }"
+  ></div>
+
+  <div class="contenitore">
+    <h3>{{ ricetta.title }}</h3>
+    <p>{{ ricetta.description }}</p>
+    <h5>Difficoltà: {{ ricetta.difficulty }}</h5>
+    <h5>
+      <img [src]="percorso + ricetta.difficulty + '.png'" />
+    </h5>
+    <div class="data-ricetta">Ricetta pubblicata il: {{ ricetta.date | date: 'longDate' }}</div>
+  </div>
+</div>
+
+<div *ngIf="ricetta === undefined || !ricetta">
+  Siamo spiacenti, ma la ricetta non esiste più!
+</div>

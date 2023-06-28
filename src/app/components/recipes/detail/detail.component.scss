@@ -1,0 +1,19 @@
+@import "../../../../styles/colors.scss";
+
+.image {
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h3 {
+  color: $primary-color-1;
+  font-weight: bold;
+}
+
+.data-ricetta {
+  text-align: right;
+}
+
+
