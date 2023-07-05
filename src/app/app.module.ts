@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule} from 'primeng/divider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,6 +20,7 @@ import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component'
 import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
+import { NewRecipeComponent } from './components/new-recipe/new-recipe.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +34,14 @@ import { RegistrationComponent } from './components/user/registration/registrati
     RecipeCardComponent,
     DetailComponent,
     RecipesListComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    NewRecipeComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,

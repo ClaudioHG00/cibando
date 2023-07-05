@@ -1,0 +1,23 @@
+@import '../../../styles/colors.scss';
+
+.card {
+  border-radius: 10%;
+  border: 10px solid $primary-color-1;
+
+  .card-body {
+    .text-center {
+      font-family: "Homemade Apple", cursive;
+    }
+    .btn-success {
+    //   --bs-btn-color: $primary-color-1;
+    //   --bs-btn-bg: $primary-color-1;
+    //   --bs-btn-border-color: $primary-color-1!important;
+    //   --bs-btn-hover-color: $primary-color-1;
+    //   --bs-btn-hover-bg: $primary-color-1;
+    //   --bs-btn-hover-border-color: $primary-color-1;
+    //   --bs-btn-active-border-color: black;
+    //   --bs-btn-active-bg: $primary-color-1;
+    }
+  }
+}
+

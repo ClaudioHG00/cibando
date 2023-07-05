@@ -10,4 +10,10 @@ header {
   .bg-red {
     background-color: $primary-color-1!important;
   }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    justify-content: flex-end;
+  }
 }

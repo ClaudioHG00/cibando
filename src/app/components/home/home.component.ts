@@ -11,8 +11,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('modalRegistration')
-  modale: ElementRef;
+  // @ViewChild('modalRegistration')
+  // modale: ElementRef;
 
   title = 'cibando';
 
