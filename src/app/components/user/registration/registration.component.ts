@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PrimeNGConfig } from 'primeng/api';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-registration',
@@ -8,6 +11,9 @@ import { PrimeNGConfig } from 'primeng/api';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+
+  titolo = 'pasta al sugo';
+  id = 24;
 
   form = new FormGroup({
     name: new FormControl('', Validators.required),
@@ -19,7 +25,12 @@ export class RegistrationComponent implements OnInit {
     accetto: new FormControl(false, Validators.requiredTrue)
   })
 
-  constructor(private config: PrimeNGConfig) {}
+  constructor(
+    private config: PrimeNGConfig,
+    private router: Router,
+    private userService: UserService,
+    private modalService: NgbModal,
+    ) {}
 
   ngOnInit(): void {
     this.config.setTranslation({
@@ -33,6 +44,9 @@ export class RegistrationComponent implements OnInit {
 
   onSubmit(){
     console.log(this.form.value);
+    const user = {name: this.form.controls.name.value, email: this.form.controls.email.value}
+    this.userService.datiUtente.next(user);
+    this.router.navigateByUrl('/home');
   }
 
   // convalidaPassword() {
@@ -50,5 +64,17 @@ export class RegistrationComponent implements OnInit {
     } else {
       return false;
     }
+  }
+
+  open(content: any, titolo?: string, id?: number) {
+    let title = titolo;
+    let idNum = id;
+
+    this.modalService.open(content, {ariaLabelledBy: 'modale privacy', size: 'lg', centered: true}).result
+    .then((res) => {
+      console.log('Azione da eseguire in caso positivo: ' + title + 'id: ' + idNum)
+    }).catch((res) => {
+      console.log('Nessuna azione da eseguire')
+    })
   }
 }

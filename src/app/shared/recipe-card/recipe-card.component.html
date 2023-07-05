@@ -1,5 +1,8 @@
 
-<div class="container-card" *ngFor="let recipe of recipes">
+
+<p-paginator (onPageChange)="paginate($event)" [rows]="ricettePerPagina" [totalRecords]="recipes.length"></p-paginator>
+
+<div class="container-card" *ngFor="let recipe of recipes | slice: (page * ricettePerPagina) - ricettePerPagina : page * ricettePerPagina">
   <div class="card">
     <div class="card-image" [ngStyle]="{'background-image': 'url(' + recipe.image + ')'}"></div>
     <div class="card-body">

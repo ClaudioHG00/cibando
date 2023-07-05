@@ -1,4 +1,41 @@
 <app-carousel></app-carousel>
+
+<ng-template [ngIf]="name">
+  <div class="background">
+    <div class="contenitore-reg">
+      <h3>Grazie {{name}} per esserti registrato, ecco il riepilogo dei tuoi dati:</h3>
+      <div class="paragrafo">
+        <p>Nome: <strong>{{name}}</strong></p>
+        <p>Email: <strong>{{email}}</strong></p>
+      </div>
+      <div class="button-bg">
+        <button class="button" (click)="closeModal()">CHIUDI</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- <ng-template #modalRegistration let-modal>
+  <div class="background">
+    <div class="modal-header">
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+      <div class="contenitore-reg">
+        <h3>Grazie {{name}} per esserti registrato, ecco il riepilogo dei tuoi dati:</h3>
+      <div class="paragrafo">
+        <p>Nome: <strong>{{name}}</strong></p>
+        <p>Email: <strong>{{email}}</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn button-bg" aria-label="chiudi" (click)="modal.dismiss()">
+        CHIUDI</button>
+    </div>
+  </div>
+</ng-template> -->
+
 <div class="contenitore">
   <h2 [ngClass]="evidenziato ? 'testoEvidenziato' : ''" (click)="onEvidenziazione()" style="cursor: pointer">
     Benvenuti in Cibando
