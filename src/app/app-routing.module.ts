@@ -8,6 +8,7 @@ import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
 import { NewRecipeComponent } from './components/new-recipe/new-recipe.component';
+import { CombineComponent } from './components/combine/combine.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch: 'full'},
@@ -16,10 +17,11 @@ const routes: Routes = [
   // { path: 'home/dettaglio/:title/:_id', redirectTo: 'ricette/dettaglio/:title/:_id'},
   { path: 'ricette', component: RecipesComponent, children: [
     { path: 'dettaglio/:title/:_id', component: DetailComponent},
+    { path: 'nuova-ricetta', component: NewRecipeComponent },
     { path: '', component: RecipesListComponent, pathMatch:'full'}
   ]},
   { path: 'registrazione', component: RegistrationComponent},
-  { path: 'nuova-ricetta', component: NewRecipeComponent },
+  { path: 'combine', component: CombineComponent},
   { path: 'error404', component: ErrorComponent},
   { path: '**', redirectTo: 'error404'},
 

@@ -1,5 +1,5 @@
 <h2>Le nostre Ricette</h2>
 
-<app-recipe-card [recipes]="ricette"></app-recipe-card>
+<app-recipe-card [recipes]="ricette$ | async"></app-recipe-card>
 
-<app-carousel [recipes]="ricette"></app-carousel>
+<app-carousel pag="ricette"></app-carousel>

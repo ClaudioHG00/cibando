@@ -67,7 +67,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-user" ></i>
-          <input placeholder="nominativo" type="text" id="name" name="name" formControlName="name"  class="form-control"/>
+          <input placeholder="nominativo" type="text" id="name" name="name" formControlName="name"  class="form-control" appChangeColor appOnPlaceHolder/>
           <label class="form-label" for="name">Il tuo nome</label>
           <p class="help is-danger" *ngIf="!form.get('name').valid && form.get('name').touched">Il campo nome è obbligatorio</p>
         </div>
@@ -76,7 +76,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-envelope" ></i>
-          <input placeholder="email" type="email" id="email" name="email"  formControlName="email" class="form-control"/>
+          <input placeholder="email" type="email" id="email" name="email"  formControlName="email" class="form-control" appOnPlaceHolder/>
           <label class="form-label" for="email">La tua email</label>
           <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.controls.email.touched">Il campo email è obbligatorio</p>
           <p class="help is-danger" *ngIf="form.controls.email.hasError('email') && form.controls.email.touched">Il campo email deve contenere una mail valida</p>
@@ -86,7 +86,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-lock" ></i>
-         <!-- <input placeholder="password" type="password" id="password" name="password" formControlName="password" class="form-control"  /> -->
+         <!-- <input placeholder="password" type="password" id="password" name="password" formControlName="password" class="form-control" appOnPlaceHolder/> -->
 
           <p-password name="password" formControlName="password" class="form-control" [toggleMask]="true" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$">
 
@@ -114,7 +114,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-key" ></i>
-          <input type="password" id="ripetiPassword" name="ripetiPassword" formControlName="ripetiPassword" class="form-control" (ngModelChange)="convalidaPassword()"/>
+          <input type="password" id="ripetiPassword" name="ripetiPassword" formControlName="ripetiPassword" class="form-control" (ngModelChange)="convalidaPassword()" appOnPlaceHolder/>
           <label class="form-label" for="ripetiPassword">Ripeti password</label>
           <p class="help is-danger" *ngIf="!convalidaPassword() && form.get('ripetiPassword').dirty">La password scritta non combacia</p>
         </div>

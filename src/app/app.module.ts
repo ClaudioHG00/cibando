@@ -21,6 +21,9 @@ import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
 import { NewRecipeComponent } from './components/new-recipe/new-recipe.component';
+import { CombineComponent } from './components/combine/combine.component';
+import { ChangeColorDirective } from './directives/change-color.directive';
+import { OnPlaceHolderDirective } from './directives/on-place-holder.directive';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { NewRecipeComponent } from './components/new-recipe/new-recipe.component
     RecipesListComponent,
     RegistrationComponent,
     NewRecipeComponent,
+    CombineComponent,
+    ChangeColorDirective,
+    OnPlaceHolderDirective,
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@
 <!-- <div *ngIf="images.length == 1">
     <img [src]="percorso + images[0].id + '.jpg'" [alt]="images[0].label" />
 </div> -->
-<div id="carosello" *ngIf="images.length > 1 && recipes === undefined">
+<div id="carosello" *ngIf="images.length > 1 && pag == 'home';">
   <ngb-carousel>
     <ng-template ngbSlide *ngFor="let image of images; let i = index">
       <div class="picsum-img-wrapper">
@@ -26,20 +26,18 @@
   </ngb-carousel>
 </div>
 
+<ng-template *ngIf="images.length === 1 && pag == 'home';" #noSlide>
+  <img [src]="percorso + images[0].id + '.jpg'" [alt]="images[0].label" />
+</ng-template>
 
-<div id="carosello-sec" *ngIf="recipes !== undefined">
+<div id="carosello-sec" *ngIf="titoli && pag =='ricette';">
   <ngb-carousel>
-    <ng-template ngbSlide *ngFor="let recipe of recipes">
+    <ng-template ngbSlide *ngFor="let titolo of titoli">
       <div class="carousel-slide">
         <div class="carousel-caption">
-          <h3>{{ recipe.title }}</h3>
+          <h3>{{titolo}}</h3>
         </div>
       </div>
     </ng-template>
   </ngb-carousel>
 </div>
-
-
-<ng-template *ngIf="images.length === 1 && recipes === undefined" #noSlide>
-  <img [src]="percorso + images[0].id + '.jpg'" [alt]="images[0].label" />
-</ng-template>

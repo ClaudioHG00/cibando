@@ -1,5 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
+import { RecipesService } from 'src/app/services/recipes.service';
 import { Recipe } from 'src/app/models/recipe.model';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-carousel',
@@ -7,6 +9,10 @@ import { Recipe } from 'src/app/models/recipe.model';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
+
+  @Input() pag: string;
+
+  titoli: string[];
 
   percorso = '../../../assets/images/imageBg-';
   images = [
@@ -17,12 +23,27 @@ export class CarouselComponent implements OnInit {
 
   @Input() recipes: Recipe[];
 
-  constructor() {
+  constructor(private recipesService: RecipesService) {
     console.log('avvio del costruttore')
   }
 
   ngOnInit(): void {
     console.log('componente avviato')
+    if(this.pag == 'ricette'){
+      this.onGetRecipes();
+    }
   }
 
+  onGetRecipes(){
+    this.recipesService.getRecipes().pipe(
+      map((res) =>res.map((ricetta) => ricetta.title)),
+    ).subscribe({
+      next: (titoli) => {
+        this.titoli = titoli;
+      },
+      error: (e) => {
+        console.log(e)
+      }
+    })
+  }
 }

@@ -142,3 +142,16 @@ footer {
   clear: both;
 }
 
+.paginatore {
+  margin-bottom: 30px;
+  .p-paginator {
+    background-color: white;
+    .p-paginator-pages .p-paginator-page.p-highlight {
+      background-color: $primary-color-1;
+      color: white;
+    }
+    .pi {
+      color: black;
+    }
+  }
+}
