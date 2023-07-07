@@ -15,15 +15,21 @@
             <a class="nav-link" routerLink="ricette" routerLinkActive="active"><i class="pi pi-book "></i> Ricette</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="registrazione" routerLinkActive="active"><i class="pi pi-user"></i> Registrazione</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="ricette/nuova-ricetta" routerLinkActive="active"><i class="pi pi-plus-circle">
+            <a class="nav-link" routerLink="ricette/nuova-ricetta" routerLinkActive="active" *ngIf="ruolo === 'admin' && authService.isLogged()"><i class="pi pi-plus-circle">
             </i> Nuova Ricetta</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"><i class="pi pi-envelope"></i> Contatti</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="login" routerLinkActive="active" *ngIf="!authService.isLogged()"><i class="pi pi-user"></i> Accedi</a>
+          </li>
+          <ul *ngIf="authService.isLogged()">
+            <li> Ciao {{user.name}} - </li>
+            <li>
+              <a class = "nav-link" (click)="logout()" style="cursor: pointer">Logout <i class="pi pi-sign-out"></i> </a>
+            </li>
+          </ul>
         </ul>
       </div>
     </div>

@@ -9,6 +9,7 @@ import { RecipesListComponent } from './components/recipes/recipes-list/recipes-
 import { RegistrationComponent } from './components/user/registration/registration.component';
 import { NewRecipeComponent } from './components/new-recipe/new-recipe.component';
 import { CombineComponent } from './components/combine/combine.component';
+import { LoginComponent } from './components/user/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch: 'full'},
@@ -21,6 +22,7 @@ const routes: Routes = [
     { path: '', component: RecipesListComponent, pathMatch:'full'}
   ]},
   { path: 'registrazione', component: RegistrationComponent},
+  { path: 'login', component: LoginComponent},
   { path: 'combine', component: CombineComponent},
   { path: 'error404', component: ErrorComponent},
   { path: '**', redirectTo: 'error404'},

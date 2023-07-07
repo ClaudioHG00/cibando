@@ -6,6 +6,7 @@ import { PasswordModule } from 'primeng/password';
 import { DividerModule} from 'primeng/divider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginatorModule } from 'primeng/paginator';
+import { ToastModule } from 'primeng/toast';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { NewRecipeComponent } from './components/new-recipe/new-recipe.component
 import { CombineComponent } from './components/combine/combine.component';
 import { ChangeColorDirective } from './directives/change-color.directive';
 import { OnPlaceHolderDirective } from './directives/on-place-holder.directive';
+import { LoginComponent } from './components/user/login/login.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { OnPlaceHolderDirective } from './directives/on-place-holder.directive';
     CombineComponent,
     ChangeColorDirective,
     OnPlaceHolderDirective,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +57,7 @@ import { OnPlaceHolderDirective } from './directives/on-place-holder.directive';
     PasswordModule,
     DividerModule,
     PaginatorModule,
+    ToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

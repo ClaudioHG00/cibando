@@ -46,7 +46,15 @@ export class RegistrationComponent implements OnInit {
     console.log(this.form.value);
     const user = {name: this.form.controls.name.value, email: this.form.controls.email.value}
     this.userService.datiUtente.next(user);
-    this.router.navigateByUrl('/home');
+
+    this.userService.insertUser(this.form.value).subscribe({
+      next: (res) => {
+        console.log(res);
+        this.router.navigateByUrl('/home');
+      },
+      error: (e) => console.log(e)
+    })
+
   }
 
   // convalidaPassword() {
