@@ -67,30 +67,37 @@
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="nome" name="nome" formControlName="nome" class="form-control" />
+                      <input type="text" id="title" name="title" formControlName="title" class="form-control" />
                       <label class="form-label" for="form3Example1c"><i class="pi pi-book"></i> Nome Ricetta</label>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="descrizione" name="descrizione" formControlName="descrizione" class="form-control" />
+                      <input type="text" id="description" name="description" formControlName="description" class="form-control" />
                       <label class="form-label" for="form3Example3c"><i class="pi pi-image"></i> Descrizione</label>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <div class="form-outline flex-fill mb-0">
-                      <input type="url" id="url" name="url" formControlName="url" class="form-control" />
+                      <input type="url" id="image" name="image" formControlName="image" class="form-control" />
                       <label class="form-label" for="form3Example3c"><i class="pi pi-image"></i> URL Immagine</label>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="difficolta" name="difficolta" formControlName="difficolta" class="form-control" />
+                      <input type="text" id="difficulty" name="difficulty" formControlName="difficulty" class="form-control" />
                       <label class="form-label" for="form3Example3c"><i class="pi pi-image"></i> Difficoltà</label>
                     </div>
+                  </div>
+
+                  <div class="form-check d-flex justify-content-center mb-5">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="published" formControlName="published" name="published" />
+                    <label class="form-check-label" for="accetto">
+                      Pubblica
+                    </label>
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
@@ -107,18 +114,18 @@
   </div>
 </section>
 
-<ng-template #modalPrivacy let-modal>
+<ng-template #modalNewRecipe let-modal>
   <div class="modal-header">
     <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
   </div>
   <div class="modal-body">
-    Dati:
+    <h2>Sei sicuro di creare la nuova ricetta?</h2>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-primary" aria-label="action" (click)="modal.close()">
-      AGGIUNGI
-      <button type="button" class="btn" aria-label="cancel" (click)="modal.dismiss()">
+    <button type="button" class="btn" aria-label="cancel" (click)="modal.dismiss()">
       ANNULLA</button>
+    <button type="button" class="btn btn-primary" aria-label="action" (click)="modal.close()">
+      CONTINUA
     </button>
   </div>
 </ng-template>
