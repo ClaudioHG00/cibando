@@ -23,4 +23,5 @@ export class UserService {
     const dati = { email: email};
     return this.http.post<any>(`${this.apiBaseUrl}/user`, dati);
   }
+
 }

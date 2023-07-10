@@ -16,4 +16,23 @@ header {
     flex-basis: auto;
     justify-content: flex-end;
   }
+
+  // .nav-item {
+  //   margin-right: 5px;
+  // }
+
+  .details-login {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    color: white;
+    list-style-type: none;
+
+    li {
+      margin-right: 5px;
+    }
+  }
 }

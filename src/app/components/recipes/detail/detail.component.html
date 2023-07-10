@@ -4,7 +4,8 @@
 
   <div class="contenitore">
     <h3>{{ ricetta.title }}</h3>
-    <p>{{ ricetta.description }}</p>
+    <!-- <p>{{ ricetta.description }}</p> -->
+    <span [innerHTML]="ricetta.description"></span>
     <h5>Difficoltà: {{ ricetta.difficulty }}</h5>
     <h5>
       <img [src]="percorso + ricetta.difficulty + '.png'" />

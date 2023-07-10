@@ -3,6 +3,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 @Component({
   selector: 'app-new-recipe',
   templateUrl: './new-recipe.component.html',
@@ -19,6 +20,45 @@ export class NewRecipeComponent implements OnInit {
     difficulty: new FormControl(''),
     published: new FormControl(false),
   })
+
+  Editor = ClassicEditor;
+  editorConfig = {
+    toolbar: {
+        items: [
+            'bold',
+            'italic',
+            'link',
+            'bulletedList',
+            'numberedList',
+            '|',
+            'indent',
+            'outdent',
+            '|',
+            'codeBlock',
+            'imageUpload',
+            'blockQuote',
+            'insertTable',
+            'undo',
+            'redo',
+        ]
+    },
+    image: {
+        toolbar: [
+            'imageStyle:full',
+            'imageStyle:side',
+            '|',
+            'imageTextAlternative'
+        ]
+    },
+    table: {
+        contentToolbar: [
+            'tableColumn',
+            'tableRow',
+            'mergeTableCells'
+        ]
+    },
+    height: 300,
+};
 
   constructor(
     private recipesService: RecipesService,
@@ -40,8 +80,9 @@ export class NewRecipeComponent implements OnInit {
         next: (res) => {
           console.log(res);
           this.router.navigateByUrl('ricette/nuova-ricetta');
+          this.form.reset()
           this.closeModal;
-          window.location.reload();
+          // window.location.reload();
         },
         error: (error) => {
           console.log(error);

@@ -25,6 +25,7 @@ export class AuthService {
       name: dati.name,
       email: dati.email,
       password: dati.password,
+      role: dati.role,
     }
 
     localStorage.setItem('user', JSON.stringify(user))

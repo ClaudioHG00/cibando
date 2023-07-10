@@ -47,6 +47,11 @@ body {
 
 }
 
+.descrizione .ck.editor__editable {
+  min-height: 200px!important;
+  max-height: 200px!important;
+}
+
 .contenitore {
   width: 100%;
   padding: 20px;

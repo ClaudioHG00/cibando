@@ -74,7 +74,8 @@
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="description" name="description" formControlName="description" class="form-control" />
+                      <!-- <input type="text" id="description" name="description" formControlName="description" class="form-control" /> -->
+                      <ckeditor [editor]="Editor" [config]="editorConfig" name="description" formControlName="description" class="form-control"></ckeditor>
                       <label class="form-label" for="form3Example3c"><i class="pi pi-image"></i> Descrizione</label>
                     </div>
                   </div>

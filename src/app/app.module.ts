@@ -7,6 +7,7 @@ import { DividerModule} from 'primeng/divider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginatorModule } from 'primeng/paginator';
 import { ToastModule } from 'primeng/toast';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,8 @@ import { CombineComponent } from './components/combine/combine.component';
 import { ChangeColorDirective } from './directives/change-color.directive';
 import { OnPlaceHolderDirective } from './directives/on-place-holder.directive';
 import { LoginComponent } from './components/user/login/login.component';
+import { HighlightBgDirective } from './directives/highlight-bg.directive';
+import { ProfileComponent } from './components/user/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,8 @@ import { LoginComponent } from './components/user/login/login.component';
     ChangeColorDirective,
     OnPlaceHolderDirective,
     LoginComponent,
+    HighlightBgDirective,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +63,7 @@ import { LoginComponent } from './components/user/login/login.component';
     DividerModule,
     PaginatorModule,
     ToastModule,
+    CKEditorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

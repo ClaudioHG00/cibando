@@ -24,10 +24,13 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="login" routerLinkActive="active" *ngIf="!authService.isLogged()"><i class="pi pi-user"></i> Accedi</a>
           </li>
-          <ul *ngIf="authService.isLogged()">
-            <li> Ciao {{user.name}} - </li>
-            <li>
-              <a class = "nav-link" (click)="logout()" style="cursor: pointer">Logout <i class="pi pi-sign-out"></i> </a>
+          <ul class="details-login" *ngIf="authService.isLogged()">
+            <li style="margin-left: -25px;"> Ciao {{user.name}}</li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="profilo"><a>[ </a><i class="pi pi-user"></i> Profilo</a>
+            </li>
+              <li>
+              <a class = "nav-link" (click)="logout()" style="cursor: pointer">Logout <i class="pi pi-sign-out"></i> ]</a>
             </li>
           </ul>
         </ul>
