@@ -5,7 +5,7 @@
 
   <!-- Tutte le cards viste da admin -->
   <div class="container-card" *ngFor="let recipe of recipess | slice: (page * ricettePerPagina) - ricettePerPagina : page * ricettePerPagina">
-    <div class="card" *ngIf="ruolo ==='admin'">
+    <div class="card" *ngIf="ruolo == 'admin'">
       <div class="card-image" [ngStyle]="{'background-image': 'url(' + recipe.image + ')'}"></div>
       <div class="card-body">
         <h5 class="card-title">{{recipe.title | uppercase}}</h5>
@@ -18,7 +18,7 @@
     </div>
 
     <!-- Solo cards con published true viste da user -->
-    <div class="card" *ngIf="ruolo === 'user' && recipe.published == true">
+    <div class="card" *ngIf="ruolo == 'user' && recipe.published == true">
       <div class="card-image" [ngStyle]="{'background-image': 'url(' + recipe.image + ')'}"></div>
       <div class="card-body">
         <h5 class="card-title">{{recipe.title | uppercase}}</h5>
