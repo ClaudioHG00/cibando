@@ -4,9 +4,11 @@ import { RECIPES } from '../mock/recipe.mock';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ReplaySubject } from 'rxjs';
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
+
+@Injectable()
 export class RecipesService {
 
   datiNuovaRicetta = new ReplaySubject();

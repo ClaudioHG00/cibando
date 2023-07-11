@@ -9,11 +9,15 @@ export class HighlightBgDirective {
   @HostBinding('style.color') color: string;
   @HostBinding('style.transition') transition: string;
 
-  @HostListener('mouseover') illumina() {
-
+  @HostListener('mouseover') luceOn() {
+    this.background = 'white'
+    this.color = 'black'
+    this.transition = 'background-color 0.3s ease'
   }
 
-  // @HostListener('mouseout')
+  @HostListener('mouseout') luceOff() {
+
+  }
 
   constructor() {}
 

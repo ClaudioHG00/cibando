@@ -5,51 +5,49 @@ import { HttpClientModule } from '@angular/common/http';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule} from 'primeng/divider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PaginatorModule } from 'primeng/paginator';
 import { ToastModule } from 'primeng/toast';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-
+import { RecipesModule } from './components/recipes/recipes.module';
 import { AppRoutingModule } from './app-routing.module';
+
+// Moduli importati per la pagina di contacts
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { RatingModule } from 'primeng/rating';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ButtonModule } from 'primeng/button';
+
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { RecipesComponent } from './components/recipes/recipes.component';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
-import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component';
-import { DetailComponent } from './components/recipes/detail/detail.component';
-import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
-import { NewRecipeComponent } from './components/new-recipe/new-recipe.component';
 import { CombineComponent } from './components/combine/combine.component';
 import { ChangeColorDirective } from './directives/change-color.directive';
 import { OnPlaceHolderDirective } from './directives/on-place-holder.directive';
 import { LoginComponent } from './components/user/login/login.component';
 import { HighlightBgDirective } from './directives/highlight-bg.directive';
 import { ProfileComponent } from './components/user/profile/profile.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarouselComponent,
     HeaderComponent,
     FooterComponent,
-    RecipesComponent,
     HomeComponent,
     ErrorComponent,
-    RecipeCardComponent,
-    DetailComponent,
-    RecipesListComponent,
     RegistrationComponent,
-    NewRecipeComponent,
     CombineComponent,
     ChangeColorDirective,
     OnPlaceHolderDirective,
     LoginComponent,
     HighlightBgDirective,
     ProfileComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,9 +59,15 @@ import { ProfileComponent } from './components/user/profile/profile.component';
     ReactiveFormsModule,
     PasswordModule,
     DividerModule,
-    PaginatorModule,
     ToastModule,
     CKEditorModule,
+    RecipesModule,
+    InputTextModule,
+    InputTextareaModule,
+    RatingModule,
+    CascadeSelectModule,
+    ConfirmDialogModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

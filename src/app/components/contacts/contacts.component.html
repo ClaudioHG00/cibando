@@ -1,0 +1,25 @@
+<div class="contenitore-form">
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Nome</label>
+      <input type="text" pInputText [(ngModel)]="name" name="name" />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="text" pInputText [(ngModel)]="email" name="email"/>
+    </div>
+    <div>
+      <label for="name">Valutazione</label>
+      <!-- <p-cascadeSelect [(ngModel)]="" [options]="" optionLabel="ricetta" optionGroupLabel="ricetta" placeholder="Seleziona una ricetta"></p-cascadeSelect> -->
+      <p-rating [(ngModel)]="mark" name="mark"></p-rating>
+    </div>
+    <div>
+      <label for="text">Feedback</label>
+      <textarea name="text" rows="5" cols="30" pInputTextarea [(ngModel)]="text" placeholder="Scrivi un tuo onesto feedback sulla ricetta!"></textarea>
+    </div>
+
+    <p-button type="submit" label="Invia"></p-button>
+
+  </form>
+
+</div>

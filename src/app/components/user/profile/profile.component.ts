@@ -11,23 +11,16 @@ import * as moment from 'moment';
 export class ProfileComponent implements OnInit {
 
   user: any;
-  email = localStorage.getItem('email');
+  email: any;
 
   dataRegistrazione: any;
 
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.userService.getUser(this.email).subscribe({
-      next: (res) => {
-        console.log(res);
-        this.user = res;
-        if (this.user.note == null) {
-          this.user.note = 'Nota non trovata';
-        }
-      },
-      error: (e) => console.log(e)
-    });
+    this.email = JSON.parse(localStorage.getItem('user')).email;
+    console.log(JSON.parse(localStorage.getItem('user')).email);
+    this.prendiProfilo(this.email);
   }
 
   prendiProfilo(email: string) {
