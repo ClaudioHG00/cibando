@@ -16,7 +16,9 @@ export class HighlightBgDirective {
   }
 
   @HostListener('mouseout') luceOff() {
-
+    this.background = '';
+    this.color = '';
+    this.transition = '';
   }
 
   constructor() {}

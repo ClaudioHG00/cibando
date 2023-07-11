@@ -2,12 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { PasswordModule } from 'primeng/password';
-import { DividerModule} from 'primeng/divider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastModule } from 'primeng/toast';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { RecipesModule } from './components/recipes/recipes.module';
+import { UserModule } from './components/user/user.module';
 import { AppRoutingModule } from './app-routing.module';
 
 // Moduli importati per la pagina di contacts
@@ -24,13 +22,10 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
-import { RegistrationComponent } from './components/user/registration/registration.component';
 import { CombineComponent } from './components/combine/combine.component';
 import { ChangeColorDirective } from './directives/change-color.directive';
 import { OnPlaceHolderDirective } from './directives/on-place-holder.directive';
-import { LoginComponent } from './components/user/login/login.component';
 import { HighlightBgDirective } from './directives/highlight-bg.directive';
-import { ProfileComponent } from './components/user/profile/profile.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
@@ -40,13 +35,10 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     FooterComponent,
     HomeComponent,
     ErrorComponent,
-    RegistrationComponent,
     CombineComponent,
     ChangeColorDirective,
     OnPlaceHolderDirective,
-    LoginComponent,
     HighlightBgDirective,
-    ProfileComponent,
     ContactsComponent,
   ],
   imports: [
@@ -57,11 +49,9 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    PasswordModule,
-    DividerModule,
-    ToastModule,
     CKEditorModule,
     RecipesModule,
+    UserModule,
     InputTextModule,
     InputTextareaModule,
     RatingModule,

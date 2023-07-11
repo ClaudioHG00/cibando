@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { ReplaySubject, Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { User } from '../models/user.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
+
+@Injectable()
 export class UserService {
 
   datiUtente = new ReplaySubject();

@@ -1,3 +1,4 @@
+
 <div *ngIf="ricetta">
   <div class="image" [ngStyle]="{ 'background-image': 'url(' + ricetta.image + ')' }"
   ></div>
@@ -6,6 +7,9 @@
     <h3>{{ ricetta.title }}</h3>
     <!-- <p>{{ ricetta.description }}</p> -->
     <span [innerHTML]="ricetta.description"></span>
+    <div class="contenitore-button">
+      <button routerLink="/ricette"><strong>INDIETRO</strong></button>
+    </div>
     <h5>Difficoltà: {{ ricetta.difficulty }}</h5>
     <h5>
       <img [src]="percorso + ricetta.difficulty + '.png'" />
@@ -17,5 +21,3 @@
 <div *ngIf="ricetta === undefined || !ricetta">
   Siamo spiacenti, ma la ricetta non esiste più!
 </div>
-
-<!-- <button routerLink="">Torna indietro</button> -->

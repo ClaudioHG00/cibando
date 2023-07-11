@@ -1,3 +1,4 @@
+import { User } from './../../../models/user.model';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PrimeNGConfig } from 'primeng/api';
@@ -93,6 +94,7 @@ export class RegistrationComponent implements OnInit {
     this.userService.datiUtente.next(user);
 
     this.descrizione = this.domSanitizer.bypassSecurityTrustHtml(this.form.value.note);
+
     this.userService.insertUser(this.form.value).subscribe({
       next: (res) => {
         console.log(res);
