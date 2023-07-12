@@ -80,5 +80,13 @@
 
 <app-recipe-card [recipes]="ricette"></app-recipe-card>
 
+<app-figlio [listaOggetti]="listaOggetti" [oggettoFiglio]="oggettoPadre" (oggettoEmesso)="riceviOggetto($event)">
+  <div *ngIf="listaOggetti.length > 0">
+    <ng-template *ngFor="let oggetto of listaOggetti">
+      <div>{{oggetto}}</div>
+    </ng-template>
+  </div>
+  <h2 secondaZona> Ecco la seconda incursione</h2>
+</app-figlio>
 
 

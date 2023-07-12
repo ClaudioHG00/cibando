@@ -24,6 +24,10 @@ export class HomeComponent implements OnInit {
 
   evidenziato = false;
 
+  oggettoPadre = 'Testo del padre';
+
+  listaOggetti = [];
+
   ricette: Recipe[];
 
   constructor(
@@ -81,4 +85,9 @@ export class HomeComponent implements OnInit {
   //     })
   //   }
   // }
+
+  riceviOggetto(event: string) {
+    console.log(event);
+    this.listaOggetti.push(event);
+  }
 }

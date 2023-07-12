@@ -102,7 +102,14 @@ export class RegistrationComponent implements OnInit {
       },
       error: (e) => console.log(e)
     })
+  }
 
+  svuotaModulo() {
+    // this.form.reset();
+    this.form.patchValue({
+      name: '',
+      email: '',
+    })
   }
 
   // convalidaPassword() {

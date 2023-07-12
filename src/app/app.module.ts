@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { RecipesModule } from './components/recipes/recipes.module';
 import { UserModule } from './components/user/user.module';
+import { MaterialCompModule } from 'src/material.module';
 import { AppRoutingModule } from './app-routing.module';
 
 // Moduli importati per la pagina di contacts
@@ -27,6 +28,7 @@ import { ChangeColorDirective } from './directives/change-color.directive';
 import { OnPlaceHolderDirective } from './directives/on-place-holder.directive';
 import { HighlightBgDirective } from './directives/highlight-bg.directive';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { FiglioComponent } from './components/figlio/figlio.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     OnPlaceHolderDirective,
     HighlightBgDirective,
     ContactsComponent,
+    FiglioComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     CascadeSelectModule,
     ConfirmDialogModule,
     ButtonModule,
+    MaterialCompModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
