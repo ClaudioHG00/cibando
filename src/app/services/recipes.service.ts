@@ -18,23 +18,26 @@ export class RecipesService {
   constructor(private http: HttpClient) { }
 
   getRecipes(): Observable<Recipe[]> {
-    // return of (RECIPES);
+    return of (RECIPES);
     // return this.http.get<Recipe[]>('pippo/' + this.apiBaseUrl + '/kdska')
-    return this.http.get<Recipe[]>(`${this.apiBaseUrl}/`)
+    // return this.http.get<Recipe[]>(`${this.apiBaseUrl}/`)
   }
 
   getRecipesAsync() {
-    return this.http.get<Recipe[]>(`${this.apiBaseUrl}/`)
+    return of (RECIPES);
+    // return this.http.get<Recipe[]>(`${this.apiBaseUrl}/`)
   }
 
-  getRecipe(id: string): Observable<Recipe> {
-    // const recipe = RECIPES.find(ricetta => ricetta._id === id);
-    // return of (recipe);
-    return this.http.get<Recipe>(`${this.apiBaseUrl}/${id}`)
+  getRecipe(id: string | number): Observable<Recipe> {
+    const recipe = RECIPES.find(ricetta => ricetta._id === id);
+    return of (recipe);
+    // return this.http.get<Recipe>(`${this.apiBaseUrl}/${id}`)
   }
 
-  createRecipe(recipe: any): Observable<Recipe> {
-    return this.http.post<Recipe>(`${this.apiBaseUrl}/`, recipe)
+  createRecipe(form: any): Observable<any[]> {
+    // return this.http.post<Recipe>(`${this.apiBaseUrl}/`, recipe)
+    RECIPES.push(form);
+    return of (RECIPES);
   }
 
 }

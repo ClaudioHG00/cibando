@@ -24,12 +24,13 @@ export class ProfileComponent implements OnInit {
   }
 
   prendiProfilo(email: string) {
-    this.userService.getUser(email).pipe(take(1)).subscribe({
-      next: res => {
-        this.user = res;
-        this.dataRegistrazione = moment(this.user.createdAt).locale('it').format('dddd DD MMMM YYYY')
-      }
-    })
+    // this.userService.getUser(email).pipe(take(1)).subscribe({
+    //   next: res => {
+    //     this.user = res;
+    //     this.dataRegistrazione = moment(this.user.createdAt).locale('it').format('dddd DD MMMM YYYY')
+    //   }
+    // })
+    this.user = JSON.parse(localStorage.getItem('user'));
   }
 
 }
